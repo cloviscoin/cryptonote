@@ -4,6 +4,7 @@
 
 #pragma once
 
+#define CRYPTONOTE_NAME "cloviscoin"
 #define CRYPTONOTE_MAX_BLOCK_NUMBER                     500000000
 #define CRYPTONOTE_MAX_BLOCK_SIZE                       500000000  // block header blob limit, never used!
 #define CRYPTONOTE_MAX_TX_SIZE                          1000000000
@@ -22,7 +23,7 @@
 //TODO Specify total number of available coins
 //TODO ((uint64_t)(-1)) equals to 18446744073709551616 coins
 //TODO or you can define number explicitly UINT64_C(858986905600000000)
-#define MONEY_SUPPLY                                   
+#define MONEY_SUPPLY                                    ((uint64_t)(-1))
 #define EMISSION_SPEED_FACTOR                           (18)
 
 //TODO Define number of blocks for block size median calculation
@@ -32,12 +33,11 @@
 //TODO Define number of digits
 #define CRYPTONOTE_DISPLAY_DECIMAL_POINT                
 //TODO Define number of smallest units in one coin
-#define COIN                                            
+#define COIN                                            8
 //TODO Define default fee for transactions
-#define DEFAULT_FEE                                     
-
+#define DEFAULT_FEE                                     100000
 //TODO Define preferred block's target time
-#define DIFFICULTY_TARGET                               120 // seconds
+#define DIFFICULTY_TARGET                               60 // seconds
 //TODO There are options to tune CryptoNote's difficulty retargeting function. 
 //TODO We recommend not to change it.
 #define DIFFICULTY_WINDOW                               720 // blocks
